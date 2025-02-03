@@ -1,4 +1,5 @@
-<img width="300" alt="snake_miner" src="https://github.com/user-attachments/assets/435ae4bc-762f-4028-9370-6746ce610e65" />
+
+<img width="1185" alt="snake_axe_pixel_banner" src="https://github.com/user-attachments/assets/e4616c8b-782c-477a-9d16-4d8fff95eaa9" />
 
 # Signal Miner
 
