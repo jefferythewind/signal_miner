@@ -21,12 +21,15 @@ def get_model(cfg):
         max_bin=cfg['max_bin'],
         max_depth=cfg['max_depth'],
         num_leaves=cfg['num_leaves'],
-        min_child_weight=cfg['min_child_samples'],
+        min_child_samples=cfg['min_child_samples'],
         n_estimators=cfg['n_estimators'],
         reg_lambda=cfg['reg_lambda'],
-        learning_rate=cfg['learning_rate']
+        learning_rate=cfg['learning_rate'],
+        n_jobs=cfg['n_jobs']
     )
+    
     return model
+    
 
 def evaluate_completed_configs(data, configurations, mmapped_array, done_splits, all_splits, ns, label='target'):
     """
@@ -49,7 +52,7 @@ def evaluate_completed_configs(data, configurations, mmapped_array, done_splits,
 
     # Extract validation and test eras
     validation_first_date = all_splits[0][1][0]
-    validation_last_date = all_splits[1][1][-1]
+    validation_last_date = all_splits[0][1][-1]
     test_first_date = all_splits[-1][1][0]
 
     eval_validation = data.loc[(data['era'] >= validation_first_date) & (data['era'] <= validation_last_date), [label, 'era', 'mmap_idx']].copy().dropna(subset=[label])
