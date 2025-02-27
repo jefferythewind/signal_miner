@@ -13,7 +13,7 @@ def get_rdn_cfgs(param_dict, num):
         cfg = get_ran_cfg(param_dict)
         if (cfg not in configurations) and (cfg['num_leaves'] <= 2 ** cfg['max_depth']):
             configurations.append(cfg)
-    return sorted(configurations, key=lambda d: d['max_depth'])
+    return configurations
 
 def get_model(cfg):
     model = lgb.LGBMRegressor(

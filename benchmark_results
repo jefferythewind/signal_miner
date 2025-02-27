@@ -1,0 +1,2 @@
+,colsample_bytree,max_bin,max_depth,num_leaves,min_child_samples,n_estimators,reg_lambda,learning_rate,target,n_jobs,validation_corr,validation_shp,validation_max_dd,test_corr,test_shp,test_max_dd,whole_corr,whole_shp,whole_max_dd,is_benchmark
+0,0.1,5,10,1024,10000,30000,0.0,0.001,target,10,0.041077934863382015,2.4434301759616894,0.01394965999562281,0.032886313452397765,1.6958069920387409,0.03396784091858818,0.03699822826289183,1.9891945305645413,0.03396784091858862,True
